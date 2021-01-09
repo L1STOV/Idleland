@@ -26,7 +26,7 @@ class TestCharacter(unittest.TestCase):
         self.assertEqual(self.dwain.set_weapon(True, 'Axe'), 'I will beat them all with this axe!')
 
     def test_dwarf_set_weapon_not_in_list(self):
-        self.assertEqual(self.dwain.set_weapon(True, 'Knife'), 'I\am unable to use this weapon')
+        self.assertEqual(self.dwain.set_weapon(True, 'Knife'), 'I\'am unable to use this weapon')
 
     def test_dwarf_set_weapon_not_armed(self):
         self.assertEqual(self.dwain.set_weapon(False, 'Axe'), 'I have never used a weapon')

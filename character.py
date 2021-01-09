@@ -11,6 +11,9 @@ class Character:
     def talk_to(self):
         raise NotImplementedError
 
+    def set_weapon(self, isArmed, weapon):
+        raise NotImplementedError
+
 
 class Dwarf(Character):
 
@@ -27,6 +30,20 @@ class Dwarf(Character):
     def talk_to(self):
         pass
 
+    def set_weapon(self, isArmed, weapon):
+        weapons_list = ['Axe', 'Hammer', 'Sword', 'Rifle', 'Spear']
+        if not isinstance(isArmed, bool):
+            raise ValueError
+        if not isinstance(weapon, str):
+            raise ValueError
+        if isArmed:
+            if weapon in weapons_list:
+                return f'I will beat them all with this {weapon.lower()}!'
+            else:
+                return f'I\'am unable to use this weapon'
+        else:
+            return f'I have never used a weapon'
+
 
 class Orc(Character):
 
@@ -41,6 +58,20 @@ class Orc(Character):
 
     def talk_to(self):
         pass
+
+    def set_weapon(self, isArmed, weapon):
+        weapons_list = ['Axe', 'Hammer', 'Sword', 'Arrow', 'Spear']
+        if not isinstance(isArmed, bool):
+            raise ValueError
+        if not isinstance(weapon, str):
+            raise ValueError
+        if isArmed:
+            if weapon in weapons_list:
+                return f'Urgh, my {weapon.lower()} gonna crash them all!'
+            else:
+                return f'Ha-ha, what you want me to do with this?'
+        else:
+            return f'Where is my weapon!?'
 
 
 class Elf(Character):
@@ -58,6 +89,20 @@ class Elf(Character):
     def talk_to(self):
         pass
 
+    def set_weapon(self, isArmed, weapon):
+        weapons_list = ['Sword', 'Arrow', 'Knife']
+        if not isinstance(isArmed, bool):
+            raise ValueError
+        if not isinstance(weapon, str):
+            raise ValueError
+        if isArmed:
+            if weapon in weapons_list:
+                return f'What a magnificent {weapon.lower()}!'
+            else:
+                return f'I don\'t know how to use this weapon'
+        else:
+            return f'Hm, seriously? I don\'t want!'
+
 
 class Human(Character):
 
@@ -73,3 +118,19 @@ class Human(Character):
 
     def talk_to(self):
         pass
+
+    def set_weapon(self, isArmed, weapon):
+        weapons_list = ['Sword', 'Arrow', 'Knife', 'Axe', 'Spear']
+        if not isinstance(isArmed, bool):
+            raise ValueError
+        if not isinstance(weapon, str):
+            raise ValueError
+        if isArmed:
+            if weapon in weapons_list:
+                return f'Perfect {weapon.lower()} i will crash my enemies'
+            else:
+                return f'Unfortunately, i don\'t know how to use it'
+        else:
+            return f'I\'am so sorry, i\'am unable to use any weapons'
+
+
