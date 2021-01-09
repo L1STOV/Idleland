@@ -7,16 +7,37 @@ class Character:
 
 
 class Dwarf(Character):
-    pass
+
+    amount_of_dwarfs = 0
+
+    def __init__(self, name, health, armor, force):
+        super().__init__(name, health, armor, force)
+        Dwarf.amount_of_dwarfs += 1
 
 
 class Orc(Character):
-    pass
+
+    amount_of_orcs = 0
+
+    def __init__(self, name, health, armor, force):
+        super().__init__(name, health, armor, force)
+        Orc.amount_of_orcs += 1
 
 
 class Elf(Character):
-    pass
+
+    amount_of_elfs = 0
+
+    def __init__(self, name, health, armor, force):
+        super().__init__(name, health, armor, force)
+        Elf.amount_of_elfs += 1
 
 
 class Human(Character):
-    pass
+
+    amount_of_humans = 0
+
+    def __init__(self, name, health, armor, force):
+        super().__init__(name, health, armor, force)
+        Human.amount_of_humans += 1
+        
