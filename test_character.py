@@ -22,6 +22,138 @@ class TestCharacter(unittest.TestCase):
     def test_human_greetings(self):
         self.assertEqual(self.anduin.greetings(), 'Greetings, my name is Anduin. How are you?')
 
+    def test_dwarf_set_weapon(self):
+        self.assertEqual(self.dwain.set_weapon(True, 'Axe'), 'I will beat them all with this axe!')
+
+    def test_dwarf_set_weapon_not_in_list(self):
+        self.assertEqual(self.dwain.set_weapon(True, 'Knife'), 'I\am unable to use this weapon')
+
+    def test_dwarf_set_weapon_not_armed(self):
+        self.assertEqual(self.dwain.set_weapon(False, 'Axe'), 'I have never used a weapon')
+
+    def test_dwarf_set_weapon_incorrect_type_first_argument_int(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_weapon(30, 'Axe')
+
+    def test_dwarf_set_weapon_incorrect_type_first_argument_float(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_weapon(30.2, 'Axe')
+
+    def test_dwarf_set_weapon_incorrect_type_first_argument_str(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_weapon('True', 'Axe')
+
+    def test_dwarf_set_weapon_incorrect_type_first_argument_list(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_weapon(['False'], 'Axe')
+
+    def test_dwarf_set_weapon_incorrect_type_first_argument_tuple(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_weapon(('True', '22'), 'Axe')
+
+    def test_dwarf_set_weapon_incorrect_type_first_argument_dict(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_weapon({'statement': False}, 'Axe')
+
+    def test_elf_set_weapon(self):
+        self.assertEqual(self.argalas.set_weapon(True, 'Arrow'), 'What a magnificent arrow!')
+
+    def test_elf_set_weapon_not_in_list(self):
+        self.assertEqual(self.argalas.set_weapon(True, 'Hammer'), 'I don\'t know how to use this weapon')
+
+    def test_elf_set_weapon_not_armed(self):
+        self.assertEqual(self.argalas.set_weapon(False, 'Arrow'), 'Hm, seriously? I don\'t want!')
+
+    def test_elf_set_weapon_incorrect_type_first_argument_int(self):
+        with self.assertRaises(ValueError):
+            self.argalas.set_weapon(30, 'Arrow')
+
+    def test_elf_set_weapon_incorrect_type_first_argument_float(self):
+        with self.assertRaises(ValueError):
+            self.argalas.set_weapon(30.2, 'Arrow')
+
+    def test_elf_set_weapon_incorrect_type_first_argument_str(self):
+        with self.assertRaises(ValueError):
+            self.argalas.set_weapon('True', 'Arrow')
+
+    def test_elf_set_weapon_incorrect_type_first_argument_list(self):
+        with self.assertRaises(ValueError):
+            self.argalas.set_weapon(['False'], 'Arrow')
+
+    def test_elf_set_weapon_incorrect_type_first_argument_tuple(self):
+        with self.assertRaises(ValueError):
+            self.argalas.set_weapon(('True', '22'), 'Arrow')
+
+    def test_elf_set_weapon_incorrect_type_first_argument_dict(self):
+        with self.assertRaises(ValueError):
+            self.argalas.set_weapon({'statement': False}, 'Arrow')
+
+    def test_orc_set_weapon(self):
+        self.assertEqual(self.urathun.set_weapon(True, 'Axe'), 'Urgh, my axe gonna crash them all!')
+
+    def test_orc_set_weapon_not_armed(self):
+        self.assertEqual(self.urathun.set_weapon(False, 'Axe'), 'Where is my weapon!?')
+
+    def test_orc_set_weapon_not_in_list(self):
+        self.assertEqual(self.urathun.set_weapon(True, 'Stones'), 'Ha-ha, what you want me to do with this?')
+
+    def test_orc_set_weapon_incorrect_type_first_argument_int(self):
+        with self.assertRaises(ValueError):
+            self.urathun.set_weapon(30, 'Arrow')
+
+    def test_orc_set_weapon_incorrect_type_first_argument_float(self):
+        with self.assertRaises(ValueError):
+            self.urathun.set_weapon(30.2, 'Arrow')
+
+    def test_orc_set_weapon_incorrect_type_first_argument_str(self):
+        with self.assertRaises(ValueError):
+            self.urathun.set_weapon('True', 'Arrow')
+
+    def test_orc_set_weapon_incorrect_type_first_argument_list(self):
+        with self.assertRaises(ValueError):
+            self.urathun.set_weapon(['False'], 'Arrow')
+
+    def test_orc_set_weapon_incorrect_type_first_argument_tuple(self):
+        with self.assertRaises(ValueError):
+            self.urathun.set_weapon(('True', '22'), 'Arrow')
+
+    def test_orc_set_weapon_incorrect_type_first_argument_dict(self):
+        with self.assertRaises(ValueError):
+            self.urathun.set_weapon({'statement': False}, 'Arrow')
+
+    def test_human_set_weapon(self):
+        self.assertEqual(self.anduin.set_weapon(True, 'Sword'), 'Perfect sword i will crash my enemies')
+
+    def test_human_set_weapon_not_armed(self):
+        self.assertEqual(self.anduin.set_weapon(False, 'Axe'), 'I\'am so sorry, i\'am unable to use any weapons')
+
+    def test_human_set_weapon_not_in_list(self):
+        self.assertEqual(self.anduin.set_weapon(True, 'Stones'), 'Unfortunately, i don\'t know how to use it')
+
+    def test_human_set_weapon_incorrect_type_first_argument_int(self):
+        with self.assertRaises(ValueError):
+            self.anduin.set_weapon(30, 'Axe')
+
+    def test_human_set_weapon_incorrect_type_first_argument_float(self):
+        with self.assertRaises(ValueError):
+            self.anduin.set_weapon(30.2, 'Axe')
+
+    def test_human_set_weapon_incorrect_type_first_argument_str(self):
+        with self.assertRaises(ValueError):
+            self.anduin.set_weapon('True', 'Axe')
+
+    def test_human_set_weapon_incorrect_type_first_argument_list(self):
+        with self.assertRaises(ValueError):
+            self.anduin.set_weapon(['False'], 'Axe')
+
+    def test_human_set_weapon_incorrect_type_first_argument_tuple(self):
+        with self.assertRaises(ValueError):
+            self.anduin.set_weapon(('True', '22'), 'Axe')
+
+    def test_human_set_weapon_incorrect_type_first_argument_dict(self):
+        with self.assertRaises(ValueError):
+            self.anduin.set_weapon({'statement': False}, 'Axe')
+
 
 if __name__ == '__main__':
     unittest.main()
