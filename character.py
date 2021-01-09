@@ -22,7 +22,7 @@ class Dwarf(Character):
         Dwarf.amount_of_dwarfs += 1
 
     def greetings(self):
-        pass
+        return f'Ho-ho, my name is {self.name}. What are you staring at?'
 
     def talk_to(self):
         pass
@@ -37,7 +37,7 @@ class Orc(Character):
         Orc.amount_of_orcs += 1
 
     def greetings(self):
-        pass
+        return f'Bir ti gi dym, {self.name} will kill you!'
 
     def talk_to(self):
         pass
@@ -53,7 +53,7 @@ class Elf(Character):
         Elf.amount_of_elfs += 1
 
     def greetings(self):
-        pass
+        return f'Nae saian luume, my name is {self.name}. I was expecting to see someone bigger'
 
     def talk_to(self):
         pass
@@ -69,7 +69,7 @@ class Human(Character):
         Human.amount_of_humans += 1
 
     def greetings(self):
-        pass
+        return f'Greetings, my name is {self.name}. How are you?'
 
     def talk_to(self):
         pass
