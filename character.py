@@ -51,7 +51,13 @@ class Dwarf(Character):
             return f'I have never used a weapon'
 
     def set_armor(self, added_armor_points):
-        pass
+        if not isinstance(added_armor_points, int):
+            raise ValueError
+        if 25 <= added_armor_points <= 75:
+            self.armor += added_armor_points
+            return f'--- Current armor value - {self.armor} points ---'
+        else:
+            return '--- Armor value for dwarfs must be in [25:75] diapason ---'
 
     def wear_shield(self, shield_armor_points):
         pass
@@ -86,7 +92,13 @@ class Orc(Character):
             return f'Where is my weapon!?'
 
     def set_armor(self, added_armor_points):
-        pass
+        if not isinstance(added_armor_points, int):
+            raise ValueError
+        if 25 <= added_armor_points <= 75:
+            self.armor += added_armor_points
+            return f'--- Current armor value - {self.armor} points ---'
+        else:
+            return '--- Armor value for orcs must be in [25:75] diapason ---'
 
     def wear_shield(self, shield_armor_points):
         pass
@@ -122,7 +134,13 @@ class Elf(Character):
             return f'Hm, seriously? I don\'t want!'
 
     def set_armor(self, added_armor_points):
-        pass
+        if not isinstance(added_armor_points, int):
+            raise ValueError
+        if 25 <= added_armor_points <= 50:
+            self.armor += added_armor_points
+            return f'--- Current armor value - {self.armor} points ---'
+        else:
+            return '--- Armor value for elfs must be in [25:50] diapason ---'
 
     def wear_shield(self, shield_armor_points):
         pass
@@ -158,7 +176,13 @@ class Human(Character):
             return f'I\'am so sorry, i\'am unable to use any weapons'
 
     def set_armor(self, added_armor_points):
-        pass
+        if not isinstance(added_armor_points, int):
+            raise ValueError
+        if 25 <= added_armor_points <= 50:
+            self.armor += added_armor_points
+            return f'--- Current armor value - {self.armor} points ---'
+        else:
+            return '--- Armor value for humans must be in [25:50] diapason ---'
 
     def wear_shield(self, shield_armor_points):
         pass
