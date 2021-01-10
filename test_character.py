@@ -190,109 +190,109 @@ class TestCharacter(unittest.TestCase):
             self.dwain.set_armor({'value': 25})
 
     def test_orc_set_armor(self):
-        self.assertEqual(self.dwain.set_armor(50), '--- Current armor value - 200 points ---')
+        self.assertEqual(self.urathun.set_armor(50), '--- Current armor value - 200 points ---')
 
     def test_orc_set_armor_banned_value(self):
-        self.assertEqual(self.dwain.set_armor(15), '--- Armor value for orcs must be in [25:75] diapason ---')
-        self.assertEqual(self.dwain.set_armor(100), '--- Armor value for orcs must be in [25:75] diapason ---')
+        self.assertEqual(self.urathun.set_armor(15), '--- Armor value for orcs must be in [25:75] diapason ---')
+        self.assertEqual(self.urathun.set_armor(100), '--- Armor value for orcs must be in [25:75] diapason ---')
 
     def test_orc_set_armor_argument_type_str(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor('25')
+            self.urathun.set_armor('25')
 
     def test_orc_set_armor_argument_type_float(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(25.5)
+            self.urathun.set_armor(25.5)
 
     def test_orc_set_armor_argument_type_none(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(None)
+            self.urathun.set_armor(None)
 
     def test_orc_set_armor_argument_type_bool(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(True)
+            self.urathun.set_armor(True)
 
     def test_orc_set_armor_argument_type_list(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor([25])
+            self.urathun.set_armor([25])
 
     def test_orc_set_armor_argument_type_tuple(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor((25, 0))
+            self.urathun.set_armor((25, 0))
 
     def test_orc_set_armor_argument_type_dict(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor({'value': 25})
+            self.urathun.set_armor({'value': 25})
 
     def test_elf_set_armor(self):
-        self.assertEqual(self.dwain.set_armor(50), '--- Current armor value - 150 points ---')
+        self.assertEqual(self.argalas.set_armor(50), '--- Current armor value - 150 points ---')
 
     def test_elf_set_armor_banned_value(self):
-        self.assertEqual(self.dwain.set_armor(15), '--- Armor value for elfs must be in [25:50] diapason ---')
-        self.assertEqual(self.dwain.set_armor(100), '--- Armor value for elfs must be in [25:50] diapason ---')
+        self.assertEqual(self.argalas.set_armor(15), '--- Armor value for elfs must be in [25:50] diapason ---')
+        self.assertEqual(self.argalas.set_armor(100), '--- Armor value for elfs must be in [25:50] diapason ---')
 
     def test_elf_set_armor_argument_type_str(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor('25')
+            self.argalas.set_armor('25')
 
     def test_elf_set_armor_argument_type_float(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(25.5)
+            self.argalas.set_armor(25.5)
 
     def test_elf_set_armor_argument_type_none(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(None)
+            self.argalas.set_armor(None)
 
     def test_elf_set_armor_argument_type_bool(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(True)
+            self.argalas.set_armor(True)
 
     def test_elf_set_armor_argument_type_list(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor([25])
+            self.argalas.set_armor([25])
 
     def test_elf_set_armor_argument_type_tuple(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor((25, 0))
+            self.argalas.set_armor((25, 0))
 
     def test_elf_set_armor_argument_type_dict(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor({'value': 25})
+            self.argalas.set_armor({'value': 25})
 
     def test_human_set_armor(self):
-        self.assertEqual(self.dwain.set_armor(50), '--- Current armor value - 150 points ---')
+        self.assertEqual(self.anduin.set_armor(50), '--- Current armor value - 150 points ---')
 
     def test_human_set_armor_banned_value(self):
-        self.assertEqual(self.dwain.set_armor(15), '--- Armor value for humans must be in [25:50] diapason ---')
-        self.assertEqual(self.dwain.set_armor(100), '--- Armor value for humans must be in [25:50] diapason ---')
+        self.assertEqual(self.anduin.set_armor(15), '--- Armor value for humans must be in [25:50] diapason ---')
+        self.assertEqual(self.anduin.set_armor(100), '--- Armor value for humans must be in [25:50] diapason ---')
 
     def test_human_set_armor_argument_type_str(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor('25')
+            self.anduin.set_armor('25')
 
     def test_human_set_armor_argument_type_float(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(25.5)
+            self.anduin.set_armor(25.5)
 
     def test_human_set_armor_argument_type_none(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(None)
+            self.anduin.set_armor(None)
 
     def test_human_set_armor_argument_type_bool(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(True)
+            self.anduin.set_armor(True)
 
     def test_human_set_armor_argument_type_list(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor([25])
+            self.anduin.set_armor([25])
 
     def test_human_set_armor_argument_type_tuple(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor((25, 0))
+            self.anduin.set_armor((25, 0))
 
     def test_human_set_armor_argument_type_dict(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor({'value': 25})
+            self.anduin.set_armor({'value': 25})
 
 
 if __name__ == '__main__':
