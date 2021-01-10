@@ -14,6 +14,9 @@ class Character:
     def set_weapon(self, isArmed, weapon):
         raise NotImplementedError
 
+    def set_armor(self, added_armor_points):
+        raise NotImplementedError
+    
 
 class Dwarf(Character):
 
@@ -44,6 +47,9 @@ class Dwarf(Character):
         else:
             return f'I have never used a weapon'
 
+    def set_armor(self, added_armor_points):
+        pass
+
 
 class Orc(Character):
 
@@ -72,6 +78,9 @@ class Orc(Character):
                 return f'Ha-ha, what you want me to do with this?'
         else:
             return f'Where is my weapon!?'
+
+    def set_armor(self, added_armor_points):
+        pass
 
 
 class Elf(Character):
@@ -103,6 +112,9 @@ class Elf(Character):
         else:
             return f'Hm, seriously? I don\'t want!'
 
+    def set_armor(self, added_armor_points):
+        pass
+
 
 class Human(Character):
 
@@ -133,4 +145,5 @@ class Human(Character):
         else:
             return f'I\'am so sorry, i\'am unable to use any weapons'
 
-
+    def set_armor(self, added_armor_points):
+        pass
