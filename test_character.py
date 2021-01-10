@@ -158,8 +158,8 @@ class TestCharacter(unittest.TestCase):
         self.assertEqual(self.dwain.set_armor(50), '--- Current armor value - 200 points ---')
 
     def test_dwarf_set_armor_banned_value(self):
-        self.assertEqual(self.dwain.set_armor(15), '--- Armor value fot dwarfs must be in [25:75] diapason ---')
-        self.assertEqual(self.dwain.set_armor(100), '--- Armor value fot dwarfs must be in [25:75] diapason ---')
+        self.assertEqual(self.dwain.set_armor(15), '--- Armor value for dwarfs must be in [25:75] diapason ---')
+        self.assertEqual(self.dwain.set_armor(100), '--- Armor value for dwarfs must be in [25:75] diapason ---')
 
     def test_dwarf_set_armor_argument_type_str(self):
         with self.assertRaises(ValueError):
@@ -186,6 +186,111 @@ class TestCharacter(unittest.TestCase):
             self.dwain.set_armor((25, 0))
 
     def test_dwarf_set_armor_argument_type_dict(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor({'value': 25})
+
+    def test_orc_set_armor(self):
+        self.assertEqual(self.dwain.set_armor(50), '--- Current armor value - 200 points ---')
+
+    def test_orc_set_armor_banned_value(self):
+        self.assertEqual(self.dwain.set_armor(15), '--- Armor value for orcs must be in [25:75] diapason ---')
+        self.assertEqual(self.dwain.set_armor(100), '--- Armor value for orcs must be in [25:75] diapason ---')
+
+    def test_orc_set_armor_argument_type_str(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor('25')
+
+    def test_orc_set_armor_argument_type_float(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(25.5)
+
+    def test_orc_set_armor_argument_type_none(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(None)
+
+    def test_orc_set_armor_argument_type_bool(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(True)
+
+    def test_orc_set_armor_argument_type_list(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor([25])
+
+    def test_orc_set_armor_argument_type_tuple(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor((25, 0))
+
+    def test_orc_set_armor_argument_type_dict(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor({'value': 25})
+
+    def test_elf_set_armor(self):
+        self.assertEqual(self.dwain.set_armor(50), '--- Current armor value - 150 points ---')
+
+    def test_elf_set_armor_banned_value(self):
+        self.assertEqual(self.dwain.set_armor(15), '--- Armor value for elfs must be in [25:50] diapason ---')
+        self.assertEqual(self.dwain.set_armor(100), '--- Armor value for elfs must be in [25:50] diapason ---')
+
+    def test_elf_set_armor_argument_type_str(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor('25')
+
+    def test_elf_set_armor_argument_type_float(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(25.5)
+
+    def test_elf_set_armor_argument_type_none(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(None)
+
+    def test_elf_set_armor_argument_type_bool(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(True)
+
+    def test_elf_set_armor_argument_type_list(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor([25])
+
+    def test_elf_set_armor_argument_type_tuple(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor((25, 0))
+
+    def test_elf_set_armor_argument_type_dict(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor({'value': 25})
+
+    def test_human_set_armor(self):
+        self.assertEqual(self.dwain.set_armor(50), '--- Current armor value - 150 points ---')
+
+    def test_human_set_armor_banned_value(self):
+        self.assertEqual(self.dwain.set_armor(15), '--- Armor value for humans must be in [25:50] diapason ---')
+        self.assertEqual(self.dwain.set_armor(100), '--- Armor value for humans must be in [25:50] diapason ---')
+
+    def test_human_set_armor_argument_type_str(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor('25')
+
+    def test_human_set_armor_argument_type_float(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(25.5)
+
+    def test_human_set_armor_argument_type_none(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(None)
+
+    def test_human_set_armor_argument_type_bool(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor(True)
+
+    def test_human_set_armor_argument_type_list(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor([25])
+
+    def test_human_set_armor_argument_type_tuple(self):
+        with self.assertRaises(ValueError):
+            self.dwain.set_armor((25, 0))
+
+    def test_human_set_armor_argument_type_dict(self):
         with self.assertRaises(ValueError):
             self.dwain.set_armor({'value': 25})
 
