@@ -16,7 +16,10 @@ class Character:
 
     def set_armor(self, added_armor_points):
         raise NotImplementedError
-    
+
+    def wear_shield(self, shield_armor_points):
+        raise NotImplementedError
+
 
 class Dwarf(Character):
 
@@ -50,6 +53,9 @@ class Dwarf(Character):
     def set_armor(self, added_armor_points):
         pass
 
+    def wear_shield(self, shield_armor_points):
+        pass
+
 
 class Orc(Character):
 
@@ -80,6 +86,9 @@ class Orc(Character):
             return f'Where is my weapon!?'
 
     def set_armor(self, added_armor_points):
+        pass
+
+    def wear_shield(self, shield_armor_points):
         pass
 
 
@@ -115,6 +124,9 @@ class Elf(Character):
     def set_armor(self, added_armor_points):
         pass
 
+    def wear_shield(self, shield_armor_points):
+        pass
+
 
 class Human(Character):
 
@@ -146,4 +158,7 @@ class Human(Character):
             return f'I\'am so sorry, i\'am unable to use any weapons'
 
     def set_armor(self, added_armor_points):
+        pass
+
+    def wear_shield(self, shield_armor_points):
         pass
