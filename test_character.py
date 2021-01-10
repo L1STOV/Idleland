@@ -175,7 +175,7 @@ class TestCharacter(unittest.TestCase):
 
     def test_dwarf_set_armor_argument_type_bool(self):
         with self.assertRaises(ValueError):
-            self.dwain.set_armor(True)
+            self.dwain.set_armor(bool)
 
     def test_dwarf_set_armor_argument_type_list(self):
         with self.assertRaises(ValueError):
@@ -210,7 +210,7 @@ class TestCharacter(unittest.TestCase):
 
     def test_orc_set_armor_argument_type_bool(self):
         with self.assertRaises(ValueError):
-            self.urathun.set_armor(True)
+            self.urathun.set_armor(bool)
 
     def test_orc_set_armor_argument_type_list(self):
         with self.assertRaises(ValueError):
@@ -245,7 +245,7 @@ class TestCharacter(unittest.TestCase):
 
     def test_elf_set_armor_argument_type_bool(self):
         with self.assertRaises(ValueError):
-            self.argalas.set_armor(True)
+            self.argalas.set_armor(bool)
 
     def test_elf_set_armor_argument_type_list(self):
         with self.assertRaises(ValueError):
@@ -280,7 +280,7 @@ class TestCharacter(unittest.TestCase):
 
     def test_human_set_armor_argument_type_bool(self):
         with self.assertRaises(ValueError):
-            self.anduin.set_armor(True)
+            self.anduin.set_armor(bool)
 
     def test_human_set_armor_argument_type_list(self):
         with self.assertRaises(ValueError):
