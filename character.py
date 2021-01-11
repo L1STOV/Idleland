@@ -20,7 +20,7 @@ class Character:
     def wear_shield(self, shield_armor_points):
         raise NotImplementedError
 
-    def kill_character(self):
+    def kill_character(self, character):
         raise NotImplementedError
 
     def use_force_potion(self):
@@ -71,7 +71,7 @@ class Dwarf(Character):
     def wear_shield(self, shield_armor_points):
         pass
 
-    def kill_character(self):
+    def kill_character(self, character):
         pass
 
     def use_force_potion(self):
@@ -121,7 +121,7 @@ class Orc(Character):
     def wear_shield(self, shield_armor_points):
         pass
 
-    def kill_character(self):
+    def kill_character(self, character):
         pass
 
     def use_force_potion(self):
@@ -172,7 +172,7 @@ class Elf(Character):
     def wear_shield(self, shield_armor_points):
         pass
 
-    def kill_character(self):
+    def kill_character(self, character):
         pass
 
     def use_force_potion(self):
@@ -223,7 +223,7 @@ class Human(Character):
     def wear_shield(self, shield_armor_points):
         pass
 
-    def kill_character(self):
+    def kill_character(self, character):
         pass
 
     def use_force_potion(self):
