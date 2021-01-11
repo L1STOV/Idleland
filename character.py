@@ -20,6 +20,15 @@ class Character:
     def wear_shield(self, shield_armor_points):
         raise NotImplementedError
 
+    def kill_character(self):
+        raise NotImplementedError
+
+    def use_force_potion(self):
+        raise NotImplementedError
+
+    def battle_roar(self):
+        raise NotImplementedError
+
 
 class Dwarf(Character):
 
@@ -186,3 +195,7 @@ class Human(Character):
 
     def wear_shield(self, shield_armor_points):
         pass
+
+
+if __name__ == '__main__':
+    pass
