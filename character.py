@@ -71,6 +71,15 @@ class Dwarf(Character):
     def wear_shield(self, shield_armor_points):
         pass
 
+    def kill_character(self):
+        pass
+
+    def use_force_potion(self):
+        pass
+
+    def battle_roar(self):
+        pass
+
 
 class Orc(Character):
 
@@ -110,6 +119,15 @@ class Orc(Character):
             return '--- Armor value for orcs must be in [25:75] diapason ---'
 
     def wear_shield(self, shield_armor_points):
+        pass
+
+    def kill_character(self):
+        pass
+
+    def use_force_potion(self):
+        pass
+
+    def battle_roar(self):
         pass
 
 
@@ -154,6 +172,15 @@ class Elf(Character):
     def wear_shield(self, shield_armor_points):
         pass
 
+    def kill_character(self):
+        pass
+
+    def use_force_potion(self):
+        pass
+
+    def battle_roar(self):
+        pass
+
 
 class Human(Character):
 
@@ -194,6 +221,15 @@ class Human(Character):
             return '--- Armor value for humans must be in [25:50] diapason ---'
 
     def wear_shield(self, shield_armor_points):
+        pass
+
+    def kill_character(self):
+        pass
+
+    def use_force_potion(self):
+        pass
+
+    def battle_roar(self):
         pass
 
 
