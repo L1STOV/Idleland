@@ -306,6 +306,18 @@ class TestCharacter(unittest.TestCase):
     def test_kill_character_human(self):
         pass
 
+    def test_use_force_potion_dwarf(self):
+        pass
+
+    def test_user_force_potion_orc(self):
+        pass
+
+    def test_user_force_potion_elf(self):
+        pass
+
+    def test_user_force_potion_human(self):
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
