@@ -294,6 +294,18 @@ class TestCharacter(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.anduin.set_armor({'value': 25})
 
+    def test_kill_character_dwarf(self):
+        pass
+
+    def test_kill_character_orc(self):
+        pass
+
+    def test_kill_character_elf(self):
+        pass
+
+    def test_kill_character_human(self):
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()
