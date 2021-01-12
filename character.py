@@ -202,7 +202,13 @@ class Elf(Character):
         pass
 
     def kill_character(self, character):
-        pass
+        if not isinstance(character, Character):
+            raise ValueError
+        else:
+            character.health = 0
+            return 'My arrows always gets their aim' \
+                   f'\n--- {character.name} was killed by {self.name} ---\n' \
+                   f'--- {character.name} {character.health} HP ---'
 
     def use_force_potion(self):
         pass
