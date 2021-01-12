@@ -295,16 +295,24 @@ class TestCharacter(unittest.TestCase):
             self.anduin.set_armor({'value': 25})
 
     def test_kill_character_dwarf(self):
-        pass
+        self.assertEqual(self.dwain.kill_character(self.argalas), 'Another elf was bitten killed'
+                                                                  '\n--- Argalas was killed by Dwain ---\n'
+                                                                  '--- Argalas 0 HP ---')
 
     def test_kill_character_orc(self):
-        pass
+        self.assertEqual(self.urathun.kill_character(self.dwain), 'That smell of Dawrf'
+                                                                  '\n--- Dwain was killed by Urathun ---\n'
+                                                                  '--- Dwain 0 HP ---')
 
     def test_kill_character_elf(self):
-        pass
+        self.assertEqual(self.argalas.kill_character(self.urathun), 'My arrows always gets their aim'
+                                                                    '\n--- Urathun was killed by Argalas ---\n'
+                                                                    '--- Urathun 0 HP ---')
 
     def test_kill_character_human(self):
-        pass
+        self.assertEqual(self.anduin.kill_character(self.urathun), 'I killed him for honor'
+                                                                   '\n--- Urathun was killed by Anduin ---\n'
+                                                                   '--- Urathun 0 HP ---')
 
     def test_use_force_potion_dwarf(self):
         pass
@@ -329,6 +337,7 @@ class TestCharacter(unittest.TestCase):
 
     def test_battle_roar_human(self):
         pass
+
 
 if __name__ == '__main__':
     unittest.main()
