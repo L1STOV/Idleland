@@ -295,12 +295,12 @@ class TestCharacter(unittest.TestCase):
             self.anduin.set_armor({'value': 25})
 
     def test_kill_character_dwarf(self):
-        self.assertEqual(self.dwain.kill_character(self.argalas), 'Another elf was bitten killed'
+        self.assertEqual(self.dwain.kill_character(self.argalas), 'Another elf was killed'
                                                                   '\n--- Argalas was killed by Dwain ---\n'
                                                                   '--- Argalas 0 HP ---')
 
     def test_kill_character_orc(self):
-        self.assertEqual(self.urathun.kill_character(self.dwain), 'That smell of Dawrf'
+        self.assertEqual(self.urathun.kill_character(self.dwain), 'That smell of dwarf'
                                                                   '\n--- Dwain was killed by Urathun ---\n'
                                                                   '--- Dwain 0 HP ---')
 

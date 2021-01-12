@@ -137,7 +137,21 @@ class Orc(Character):
         pass
 
     def kill_character(self, character):
-        pass
+        if not isinstance(character, Character):
+            raise ValueError
+        else:
+            if isinstance(character, Elf):
+                character_class_name = Elf.__name__.lower()
+            elif isinstance(character, Dwarf):
+                character_class_name = Dwarf.__name__.lower()
+            elif isinstance(character, Orc):
+                character_class_name = Orc.__name__.lower()
+            else:
+                character_class_name = Human.__name__.lower()
+            character.health = 0
+            return f'That smell of {character_class_name}' \
+                   f'\n--- {character.name} was killed by {self.name} ---\n' \
+                   f'--- {character.name} 0 HP ---'
 
     def use_force_potion(self):
         pass
