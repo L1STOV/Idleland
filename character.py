@@ -72,7 +72,22 @@ class Dwarf(Character):
         pass
 
     def kill_character(self, character):
-        pass
+        if not isinstance(character, Character):
+            raise ValueError
+        else:
+            if isinstance(character, Elf):
+                character_class_name = Elf.__name__.lower()
+            elif isinstance(character, Dwarf):
+                character_class_name = Dwarf.__name__.lower()
+            elif isinstance(character, Orc):
+                character_class_name = Orc.__name__.lower()
+            else:
+                character_class_name = Human.__name__.lower()
+
+            character.health = 0
+            return f'Another {character_class_name} was killed'\
+                   f'\n--- {character.name} was killed by {self.name} ---\n' \
+                   f'--- {character.name} {character.health} HP ---'
 
     def use_force_potion(self):
         pass
@@ -235,3 +250,4 @@ class Human(Character):
 
 if __name__ == '__main__':
     pass
+
